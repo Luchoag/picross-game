@@ -1,0 +1,95 @@
+<!--30/10/2017 Update: 4th Level added!-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SoloPicross Game</title>
+        <script type="text/javascript" src="picJS.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylePic.css" />
+    </head>
+   
+    <body>
+      <header>
+      <h1>SoloPicross!</h1>
+          <b>Solve the puzzles!</b>
+      </header>
+      <center>
+      <br>
+      <!--Main Menu-->
+      <div id="menu">
+      <button onclick="startGame();level1()">Start Game</button>
+      <br><br>
+      <button onclick="chooseLevel()">Choose Level</button>
+      <br><br>
+      <button onclick="openHTP()">How To Play</button>
+      </div>
+      <!--Menu for choosing levels-->
+      <section id="menuLevels">
+        <div id="page1">
+          <button onclick="startGame();level1()">Level 1</button>
+          <br><br>
+          <button onclick="startGame();level2()">Level 2</button>
+          <br><br>
+          <button onclick="startGame();level3()">Level 3</button>
+          <br>
+        </div>
+        <div id="page2">
+          <button onclick="startGame();level4()">Level 4</button>
+          <br>
+        </div>
+        <button id="back" onclick="goBack()"><</button>
+        <button id="back" onclick="next()">></button>
+      </section>
+      <!--Start of the How To Play Section-->
+      <div id="menuHTP">
+          <h3>How to Play</h3>
+          In this game, also known as Nonogram or Hanjie, your goal is to find the shape hidden in the board. To do so, you will have to fill the correct cells of the grid with black squares. The numbers surrounding the grid indicate how many continuous black squares are in that row or column. If there is more than one number in a row, it means you will first find the sequence of the first number and then the sequence of the other/s number/s, separated from each other by at least one blank square. The cells where there are no black squares can remain unfilled, but it's recommended to fill them with a gray square (click/tap twice) to help you solve the puzzle.
+When you think you're done filling the grid, click the "Check Puzzle" button to see if you did it right.
+          <p><button id="back" onclick="goBack()"><</button></p>
+      </div>
+      <!--End of How To Play Section-->
+      </center>
+      <!--Below is the the start of the grid for the game.
+      It's actually a 11x11 grid because it includes the rows and columns where the numbers are displayed.
+      Each cell invokes the "fill(value)" function in the JS code. The "value" parameter indicates which cell has to be filled with the black/gray square.
+      -->
+      <table id ="level1" border="2">
+      <tr class="num"><td class="num2"><b>Level 1</b></td><td>4</td><td>7</td><td>8</td><td>9</td><td>9</td><td>9</td><td>9</td><td>8</td><td>7</td><td>4</td></tr>
+      
+      <tr><td class="num2">3 - 3</td><td onclick="fill(12)"></td><td onclick="fill(13)"></td><td onclick="fill(14)"></td><td onclick="fill(15)"></td><td class="quintaC" onclick="fill(16)"></td><td class="sextaC" onclick="fill(17)"></td><td onclick="fill(18)"></td><td onclick="fill(19)"></td><td onclick="fill(20)"></td><td onclick="fill(21)"></td></tr>
+      
+      <tr><td class="num2">10</td><td onclick="fill(23)"></td><td onclick="fill(24)"></td><td onclick="fill(25)"></td><td onclick="fill(26)"></td><td class="quintaC" onclick="fill(27)"></td><td class="sextaC" onclick="fill(28)"></td><td onclick="fill(29)"></td><td onclick="fill(30)"></td><td onclick="fill(31)"></td><td onclick="fill(32)"></td></tr>
+      
+      <tr><td class="num2">10</td><td onclick="fill(34)"></td><td onclick="fill(35)"></td><td onclick="fill(36)"></td><td onclick="fill(37)"></td><td class="quintaC" onclick="fill(38)"></td><td class="sextaC" onclick="fill(39)"></td><td onclick="fill(40)"></td><td onclick="fill(41)"></td><td onclick="fill(42)"></td><td onclick="fill(43)"></td></tr>
+      
+      <tr><td class="num2">10</td><td onclick="fill(45)"></td><td onclick="fill(46)"></td><td onclick="fill(47)"></td><td onclick="fill(48)"></td><td class="quintaC" onclick="fill(49)"></td><td class="sextaC" onclick="fill(50)"></td><td onclick="fill(51)"></td><td onclick="fill(52)"></td><td onclick="fill(53)"></td><td onclick="fill(54)"></td></tr>
+      
+      <tr class="quintaF"><td class="num2">10</td><td onclick="fill(56)"></td><td onclick="fill(57)"></td><td onclick="fill(58)"></td><td onclick="fill(59)"></td><td class="quintaC" onclick="fill(60)"></td><td class="sextaC" onclick="fill(61)"><td onclick="fill(62)"></td><td onclick="fill(63)"></td><td onclick="fill(64)"></td><td onclick="fill(65)"></td></tr>
+      
+      <tr class="sextaF"><td class="num2">8</td><td onclick="fill(67)"></td><td onclick="fill(68)"></td><td onclick="fill(69)"></td><td onclick="fill(70)"></td><td class="quintaC" onclick="fill(71)"></td><td class="sextaC" onclick="fill(72)"><td onclick="fill(73)"></td><td onclick="fill(74)"></td><td onclick="fill(75)"></td><td onclick="fill(76)"></td></tr>
+      
+      <tr><td class="num2">8</td><td onclick="fill(78)"></td><td onclick="fill(79)"></td><td onclick="fill(80)"></td><td onclick="fill(81)"></td><td class="quintaC" onclick="fill(82)"></td><td class="sextaC" onclick="fill(83)"></td><td onclick="fill(84)"></td><td onclick="fill(85)"></td><td onclick="fill(86)"></td><td onclick="fill(87)"></td></tr>
+      
+      <tr><td class="num2">6</td><td onclick="fill(89)"></td><td onclick="fill(90)"></td><td onclick="fill(91)"></td><td onclick="fill(92)"></td><td class="quintaC" onclick="fill(93)"></td><td class="sextaC" onclick="fill(94)"></td><td onclick="fill(95)"></td><td onclick="fill(96)"></td><td onclick="fill(97)"></td><td onclick="fill(98)"></td></tr>
+      
+      <tr><td class="num2">4</td><td onclick="fill(100)"></td><td onclick="fill(101)"></td><td onclick="fill(102)"></td><td onclick="fill(103)"></td><td class="quintaC" onclick="fill(104)"></td><td class="sextaC" onclick="fill(105)"></td><td onclick="fill(106)"></td><td onclick="fill(107)"></td><td onclick="fill(108)"></td><td onclick="fill(109)"></td></tr>
+      
+      <tr><td class="num2">2</td><td onclick="fill(111)"></td><td onclick="fill(112)"></td><td onclick="fill(113)"></td><td onclick="fill(114)"></td><td class="quintaC" onclick="fill(115)"></td><td class="sextaC" onclick="fill(116)"></td><td onclick="fill(117)"></td><td onclick="fill(118)"></td><td onclick="fill(119)"></td><td onclick="fill(120)"></td></tr>
+      </table>
+
+      <br>
+      <center>
+        <!--Button to check if the puzzle is correct-->
+        <p><button id="checkbtn" onclick="checkPuzzle()">Check Puzzle</button></p>
+        <!--A timer to check the time needed to complete each level. It is not displayed in the game-->
+        <p id="timer">00:00:00</p>
+        <!--Button to go back to the main menu-->
+        <p><button id="back2" onclick="goBack()"><</button></p>
+      </center>
+
+
+
+    </body>
+
+</html>
